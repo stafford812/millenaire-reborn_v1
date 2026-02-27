@@ -35,8 +35,11 @@ dependencies {
 	mappings loom.officialMojangMappings()
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	// Fabric API
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	// Fabric API - using stable version without javadoc issues
+	modImplementation("net.fabricmc.fabric-api:fabric-api:${project.fabric_version}") {
+		exclude group: "net.fabricmc", module: "fabric-api-base"
+	}
+	modImplementation "net.fabricmc.fabric-api:fabric-api-base:${project.fabric_version}"
 }
 
 processResources {
