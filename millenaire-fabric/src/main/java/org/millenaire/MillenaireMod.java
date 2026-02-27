@@ -1,8 +1,6 @@
 package org.millenaire;
 
 import net.fabricmc.api.ModInitializer;
-import org.millenaire.common.block.ModBlocks;
-import org.millenaire.common.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,12 +10,13 @@ public class MillenaireMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Initializing Millenaire Reborn for Minecraft 1.21.11");
+        LOGGER.info("========================================");
+        LOGGER.info("  Millenaire Reborn загружается!");
+        LOGGER.info("  Версия: Alpha 1.0.0");
+        LOGGER.info("========================================");
         
-        // Register blocks and items
-        ModBlocks.register();
-        ModItems.register();
+        // TODO: Регистрация блоков и предметов будет здесь
         
-        LOGGER.info("Millenaire Reborn initialized successfully!");
+        LOGGER.info("Millenaire успешно инициализирован!");
     }
 }
